@@ -45,39 +45,40 @@ class DefaultFirebaseOptions {
 
   // Replace these with your actual Firebase configuration
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'your-api-key',
-    appId: 'your-app-id',
-    messagingSenderId: 'your-sender-id',
-    projectId: 'your-project-id',
-    authDomain: 'your-project-id.firebaseapp.com',
-    storageBucket: 'your-project-id.appspot.com',
+    apiKey: 'AIzaSyBcgzrXUzFFeCHwvOLSqEXyRP9NVSohwgM',
+    appId: '1:475875575304:web:5aaaefe7c29fab991a33bd',
+    messagingSenderId: '475875575304',
+    projectId: 'sarv-suvidhaen-ef66c',
+    authDomain: 'sarv-suvidhaen-ef66c.firebaseapp.com',
+    storageBucket: 'sarv-suvidhaen-ef66c.appspot.com',
+    measurementId: 'G-GSBG78KYHV',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'your-api-key',
-    appId: 'your-app-id',
-    messagingSenderId: 'your-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.appspot.com',
+    apiKey: 'AIzaSyBcgzrXUzFFeCHwvOLSqEXyRP9NVSohwgM',
+    appId: 'YOUR_ANDROID_APP_ID_HERE',
+    messagingSenderId: '475875575304',
+    projectId: 'sarv-suvidhaen-ef66c',
+    storageBucket: 'sarv-suvidhaen-ef66c.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'your-api-key',
-    appId: 'your-app-id',
-    messagingSenderId: 'your-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.appspot.com',
-    iosClientId: 'your-ios-client-id',
+    apiKey: 'AIzaSyBcgzrXUzFFeCHwvOLSqEXyRP9NVSohwgM',
+    appId: 'YOUR_IOS_APP_ID_HERE',
+    messagingSenderId: '475875575304',
+    projectId: 'sarv-suvidhaen-ef66c',
+    storageBucket: 'sarv-suvidhaen-ef66c.appspot.com',
+    iosClientId: '475875575304-kit8evddc8avak9gn3jb9smqrfi9cu8a.apps.googleusercontent.com',
     iosBundleId: 'com.example.passwordRemember',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'your-api-key',
-    appId: 'your-app-id',
-    messagingSenderId: 'your-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.appspot.com',
-    iosClientId: 'your-ios-client-id',
+    apiKey: 'AIzaSyBcgzrXUzFFeCHwvOLSqEXyRP9NVSohwgM',
+    appId: 'YOUR_MACOS_APP_ID_HERE',
+    messagingSenderId: '475875575304',
+    projectId: 'sarv-suvidhaen-ef66c',
+    storageBucket: 'sarv-suvidhaen-ef66c.appspot.com',
+    iosClientId: '475875575304-kit8evddc8avak9gn3jb9smqrfi9cu8a.apps.googleusercontent.com',
     iosBundleId: 'com.example.passwordRemember',
   );
 } 

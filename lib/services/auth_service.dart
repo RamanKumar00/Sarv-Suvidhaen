@@ -51,23 +51,31 @@ class AuthService extends ChangeNotifier {
       _isLoading = true;
       notifyListeners();
 
-      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      if (googleUser == null) {
-        // The user canceled the sign-in
-        _isLoading = false;
-        notifyListeners();
-        return false;
+      UserCredential userCredential;
+
+      if (kIsWeb) {
+        // For web, use signInWithPopup which is the recommended flow.
+        final GoogleAuthProvider googleProvider = GoogleAuthProvider();
+        userCredential = await _auth.signInWithPopup(googleProvider);
+      } else {
+        // For mobile, use the existing google_sign_in flow.
+        final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+        if (googleUser == null) {
+          // The user canceled the sign-in
+          _isLoading = false;
+          notifyListeners();
+          return false;
+        }
+
+        final GoogleSignInAuthentication googleAuth =
+            await googleUser.authentication;
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth.accessToken,
+          idToken: googleAuth.idToken,
+        );
+        userCredential = await _auth.signInWithCredential(credential);
       }
 
-      final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
-      final AuthCredential credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken,
-      );
-
-      final UserCredential userCredential =
-          await _auth.signInWithCredential(credential);
       final User? user = userCredential.user;
 
       if (user != null) {

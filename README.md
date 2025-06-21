@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sarv-Suvidhaen
 
 A secure Flutter application with Google OAuth login and Remember My Password functionality
@@ -259,7 +258,4 @@ For support and questions:
 
 ---
 
-**Note**: This project is for educational purposes and demonstrates best practices for Flutter authentication implementation. Always follow security best practices when implementing authentication in production applications. 
-=======
-# Sarv-Suvidhaen
->>>>>>> e9caf3c4f4bb73e5d098b59c9f917c0c8bc32942
+**Note**: This project is for educational purposes and demonstrates best practices for Flutter authentication implementation. Always follow security best practices when implementing authentication in production applications.
